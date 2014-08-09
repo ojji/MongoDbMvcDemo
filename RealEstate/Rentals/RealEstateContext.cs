@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using RealEstate.Properties;
 
-namespace RealEstate
+namespace RealEstate.Rentals
 {
     public class RealEstateContext
     {
