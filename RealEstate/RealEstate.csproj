@@ -129,6 +129,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Rentals\Rental.cs" />
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
