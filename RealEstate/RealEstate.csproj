@@ -118,6 +118,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
+    <Compile Include="Rentals\QueryPriceDistribution.cs" />
     <Compile Include="ViewModels\AdjustPrice.cs" />
     <Compile Include="ViewModels\PostRental.cs" />
     <Compile Include="Rentals\PriceAdjustment.cs" />

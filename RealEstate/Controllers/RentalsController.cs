@@ -74,9 +74,15 @@ namespace RealEstate.Controllers
             return RedirectToAction("Index");
         }
 
+        public string PriceDistribution()
+        {
+            return new QueryPriceDistribution().Run(_context.Rentals).ToJson();
+        }
+
         private Rental GetRental(string id)
         {
             return _context.Rentals.FindOneById(new ObjectId(id));
         }
+
     }
 }
