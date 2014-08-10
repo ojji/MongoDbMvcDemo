@@ -33,6 +33,7 @@
         <th>Last adjustment</th>
         <th></th>
         <th></th>
+        <th></th>
     </tr>
     @foreach (var rental in Model.Rentals)
     {
@@ -54,6 +55,9 @@
             </td>
             <td>
                 @Html.ActionLink("Adjust price", "AdjustPrice", new { id = rental.Id })
+            </td>
+            <td>
+                @Html.ActionLink("Attach image", "AttachImage", new { id = rental.Id })
             </td>
             <td>
                 @Html.ActionLink("Delete", "Delete", new { id = rental.Id })
