@@ -16,5 +16,13 @@ namespace RealEstate.Rentals
         public MongoDatabase Database {
             get { return _database; }
         }
+
+        public MongoCollection<Rental> Rentals
+        {
+            get
+            {
+                return Database.GetCollection<Rental>("rentals");
+            }
+        }
     }
 }

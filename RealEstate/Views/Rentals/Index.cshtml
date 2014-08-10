@@ -1,0 +1,55 @@
+﻿@model IEnumerable<RealEstate.Rentals.Rental>
+
+@{
+    ViewBag.Title = "Rental listings";
+}
+
+<h2>Rental listings</h2>
+<p>
+    @Html.ActionLink("Post a rental", "Post")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m=>m.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.NumberOfRooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Price)
+        </th>
+        <th>Last adjustment</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var rental in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => rental.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(m => rental.NumberOfRooms)
+            </td>
+            <td>
+                @string.Join(" ", rental.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(m => rental.Price)
+            </td>
+            <td>
+                @rental.PriceAdjustments.Select(a => a.Describe()).LastOrDefault()
+            </td>
+            <td>
+                @Html.ActionLink("Adjust price", "AdjustPrice", new { id = rental.Id })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = rental.Id })
+            </td>
+        </tr>
+    }
+</table>

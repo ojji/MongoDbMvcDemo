@@ -1,0 +1,46 @@
+﻿@model RealEstate.Rentals.Rental
+@{
+    ViewBag.Title = "Adjust price";
+}
+<h2>Adjust price</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2">Description</label>
+            <div class="col-md-10">
+                @Model.Description
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="control-label col-md-2">Price</label>
+            <div class="col-md-10">
+                @Model.Price
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.Label("AdjustPrice", "Adjust price", new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextBox("NewPrice")
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.Label("Reason", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextArea("Reason")
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Adjust price" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}
