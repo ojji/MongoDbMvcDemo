@@ -2,6 +2,7 @@
 using System.Linq;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using RealEstate.ViewModels;
 
 namespace RealEstate.Rentals
 {

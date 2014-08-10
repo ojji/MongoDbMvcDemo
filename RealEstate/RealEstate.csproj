@@ -118,7 +118,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
-    <Compile Include="Rentals\PostRental.cs" />
+    <Compile Include="ViewModels\AdjustPrice.cs" />
+    <Compile Include="ViewModels\PostRental.cs" />
     <Compile Include="Rentals\PriceAdjustment.cs" />
     <Compile Include="Rentals\RealEstateContext.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -133,8 +134,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Rentals\Rental.cs" />
+    <Compile Include="Rentals\RentalsFilter.cs" />
+    <Compile Include="ViewModels\RentalsList.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="Rentals\AdjustPrice.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

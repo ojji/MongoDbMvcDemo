@@ -1,4 +1,6 @@
-﻿namespace RealEstate.Rentals
+﻿using RealEstate.ViewModels;
+
+namespace RealEstate.Rentals
 {
     public class PriceAdjustment
     {

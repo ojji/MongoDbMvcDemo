@@ -1,4 +1,4 @@
-﻿namespace RealEstate.Rentals
+﻿namespace RealEstate.ViewModels
 {
     public class PostRental
     {

@@ -1,32 +1,40 @@
-﻿@model IEnumerable<RealEstate.Rentals.Rental>
+﻿@model RealEstate.ViewModels.RentalsList
 
 @{
     ViewBag.Title = "Rental listings";
 }
 
 <h2>Rental listings</h2>
+@using (Html.BeginForm())
+{
+    <label for="PriceLimit">Price limit</label>
+    <input type="text" name="PriceLimit" value="@Model.Filters.PriceLimit"/>
+    <label for="MinimumRooms">Minimum rooms</label>
+    <input type="text" name="MinimumRooms" value="@Model.Filters.MinimumRooms" />
+    <input type="submit" value="Search"/>
+}
 <p>
     @Html.ActionLink("Post a rental", "Post")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(m=>m.Description)
+            Description
         </th>
         <th>
-            @Html.DisplayNameFor(m => m.NumberOfRooms)
+            Number of rooms
         </th>
         <th>
-            @Html.DisplayNameFor(m => m.Address)
+            Address
         </th>
         <th>
-            @Html.DisplayNameFor(m => m.Price)
+            Price
         </th>
         <th>Last adjustment</th>
         <th></th>
         <th></th>
     </tr>
-    @foreach (var rental in Model)
+    @foreach (var rental in Model.Rentals)
     {
         <tr>
             <td>
